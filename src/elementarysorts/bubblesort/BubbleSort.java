@@ -1,12 +1,26 @@
 /**
  * Bubble Sort
  *
- * Best Case: O(n)
+ * Description:
+ * Repeatedly compares adjacent elements and swaps them when they
+ * are in the wrong order. After each iteration, the largest
+ * unsorted element "bubbles up" to its correct position.
+ *
+ * Time Complexity:
+ * Best Case: O(n)      // With early-exit optimization
  * Average Case: O(n²)
  * Worst Case: O(n²)
- * Space Complexity: O(1)
+ *
+ * Space Complexity:
+ * O(1)
+ *
+ * Characteristics:
  * Stable: Yes
  * In-Place: Yes
+ * Adaptive: Yes        // With early-exit optimization
+ *
+ * Strategy:
+ * Exchange Sort
  */
 
 package elementarysorts.bubblesort;
