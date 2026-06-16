@@ -1,3 +1,4 @@
+package interfaces;
 
 public interface ISort<T extends Comparable<T>> {
     
