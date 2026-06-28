@@ -1,3 +1,4 @@
+import elementarysorts.incertionsort.InsertionSort;
 import elementarysorts.selectionsort.SelectionSort;
 import interfaces.ISort;
 
@@ -13,13 +14,14 @@ public class Main {
         }
         
 //        ISort<Integer> sorter = new BubbleSort<>();
-//
 //        sorter.sort(S);
         
-        ISort<Integer> sorter = new SelectionSort<>();
-        
+//        ISort<Integer> sorter = new SelectionSort<>();
+//        sorter.sort(S);
+
+        ISort<Integer> sorter = new InsertionSort<>();
         sorter.sort(S);
-        
+
         System.out.println();
         
         for(Integer i : S){
