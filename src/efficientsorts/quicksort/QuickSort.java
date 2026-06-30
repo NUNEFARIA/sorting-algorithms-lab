@@ -28,7 +28,28 @@ public class QuickSort<T extends Comparable<T>> implements ISort<T> {
 
     private int partition(T[] array, int left, int right) {
 
-        return
+        T pivot = array[right];
+        int i = left - 1;
+
+        for (int j = left; j < right; j++) {
+
+            if (array[j].compareTo(pivot) <= 0) {
+
+                i++;
+                swap(array, i, j);
+            }
+        }
+
+        i++;
+        swap(array, i, right);
+        return i;
+    }
+
+    private void swap(T[] array, int i, int j) {
+
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 
 }
