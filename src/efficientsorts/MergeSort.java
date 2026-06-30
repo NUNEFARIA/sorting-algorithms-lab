@@ -8,13 +8,17 @@ public class MergeSort<T extends Comparable<T>> implements ISort<T> {
     @Override
     public void sort(T[] array) {
 
+        if (array == null || array.length <= 1) {
+            return;
+        }
+        mergeSort(array, 0, array.length-1);
     }
 
     private void mergeSort(T[] array, int left, int right) {
 
         if (left < right) {
 
-            int middle = (left + right)/2;
+            int middle = left + (right - left) / 2;
             mergeSort(array, left, middle);
             mergeSort(array,middle+1, right);
             merge(array, left, middle, right);
