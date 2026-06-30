@@ -10,21 +10,53 @@ public class MergeSort<T extends Comparable<T>> implements ISort<T> {
 
     }
 
-    public void mergeSort(T[] array, int left, int right) {
+    private void mergeSort(T[] array, int left, int right) {
 
         if (left < right) {
 
             int middle = (left + right)/2;
             mergeSort(array, left, middle);
             mergeSort(array,middle+1, right);
-            merge(array, right, middle, right);
+            merge(array, left, middle, right);
         }
 
     }
 
-    public void merge(T[] array, int right, int meddle, int left) {
+    private void merge(T[] array, int left, int middle, int right) {
 
+        int indexLeft = left;
+        int indexRight = middle +1;
 
+        // Solution from ChatGPT allow to create array generic type
+        @SuppressWarnings("unchecked")
+        T[] temp = (T[]) new Comparable[right - left + 1];
+        int indexTemp = 0;
+
+        while (indexLeft <= middle && indexRight <= right) {
+
+            if (array[indexLeft].compareTo(array[indexRight]) <= 0) {
+
+                temp[indexTemp++] = array[indexLeft++];
+
+            }
+            else {
+
+                temp[indexTemp++] = array[indexRight++];
+
+            }
+        }
+
+        while (indexLeft <= middle) {
+            temp[indexTemp++] = array[indexLeft++];
+        }
+
+        while (indexRight <= right) {
+            temp[indexTemp++] = array[indexRight++];
+        }
+
+        for (int i = 0; i < temp.length; i++) {
+            array[left + i] = temp[i];
+        }
 
     }
 }
