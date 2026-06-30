@@ -4,7 +4,6 @@ import interfaces.ISort;
 
 public class QuickSort<T extends Comparable<T>> implements ISort<T> {
 
-
     @Override
     public void sort(T[] array) {
 
@@ -19,9 +18,11 @@ public class QuickSort<T extends Comparable<T>> implements ISort<T> {
     private void quickSort(T[] array, int left, int right) {
 
         if (left < right) {
+
             int pivot = partition(array, left, right);
             quickSort(array, left, pivot - 1);
             quickSort(array, pivot + 1, right);
+
         }
 
     }
@@ -43,6 +44,7 @@ public class QuickSort<T extends Comparable<T>> implements ISort<T> {
         i++;
         swap(array, i, right);
         return i;
+
     }
 
     private void swap(T[] array, int i, int j) {
@@ -50,6 +52,7 @@ public class QuickSort<T extends Comparable<T>> implements ISort<T> {
         T temp = array[i];
         array[i] = array[j];
         array[j] = temp;
+
     }
 
 }

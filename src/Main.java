@@ -1,4 +1,5 @@
 import efficientsorts.mergesort.MergeSort;
+import efficientsorts.quicksort.QuickSort;
 import interfaces.ISort;
 
 
@@ -21,7 +22,10 @@ public class Main {
 //        ISort<Integer> sorter = new InsertionSort<>();
 //        sorter.sort(S);
 
-        ISort<Integer> sorter = new MergeSort<>();
+//        ISort<Integer> sorter = new MergeSort<>();
+//        sorter.sort(S);
+
+        ISort<Integer> sorter = new QuickSort<>();
         sorter.sort(S);
 
         System.out.println();
