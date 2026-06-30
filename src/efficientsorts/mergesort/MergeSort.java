@@ -1,4 +1,4 @@
-package efficientsorts;
+package efficientsorts.mergesort;
 
 import interfaces.ISort;
 

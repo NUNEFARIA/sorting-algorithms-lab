@@ -1,6 +1,4 @@
-import efficientsorts.MergeSort;
-import elementarysorts.incertionsort.InsertionSort;
-import elementarysorts.selectionsort.SelectionSort;
+import efficientsorts.mergesort.MergeSort;
 import interfaces.ISort;
 
 
