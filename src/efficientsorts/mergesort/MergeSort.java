@@ -1,3 +1,32 @@
+/**
+ * Merge Sort
+ *
+ * Description:
+ * A divide-and-conquer sorting algorithm that recursively splits the array
+ * into two halves, sorts each half independently, and then merges the sorted
+ * halves into a single ordered array.
+ *
+ * Time Complexity:
+ * Best Case: O(n log n)
+ * Average Case: O(n log n)
+ * Worst Case: O(n log n)
+ *
+ * Space Complexity:
+ * O(n)
+ *
+ * Characteristics:
+ * Stable: Yes
+ * In-Place: No
+ * Adaptive: No
+ *
+ * Strategy:
+ * Divide and Conquer
+ *
+ * Merge Strategy:
+ * Recursively divides the array until subarrays contain one element, then
+ * merges adjacent sorted subarrays using an auxiliary array.
+ */
+
 package efficientsorts.mergesort;
 
 import interfaces.ISort;
